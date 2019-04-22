@@ -1,0 +1,114 @@
+.containerrrr{
+  
+	border-radius: 10px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  width: 414px; 
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+label {
+	display: block;
+	cursor: pointer;
+	margin-top: 15px;
+}
+img {
+  margin-left: 10px;
+
+  padding-top: 10px;
+
+} 
+.box {
+  display: flex;
+  align-items:center;
+}
+
+
+button {
+	border: 0;
+	outline: none;
+	padding: 7px 13px;
+	box-shadow: 1px 1px 1px #ccc;
+	border-radius: 1px;
+	background: #27ae60;
+	color: #ecf0f1;
+	cursor: pointer;
+}
+
+* { box-sizing: border-box; }
+body {
+  font: 16px Arial; 
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  border-radius:10px;
+  background-color: #8A8AFF;
+  color: #fff;
+}
+
+input[type=submit]:hover{background-color:#2A00FF;
+	outline: 0; border:none;
+	color: white;
+  }
+  input[type=submit]:focus{
+	outline: 0;
+}
+input[type=submit]:active {
+	  background-color: #2A00FF;
+	  border:none;
+	  color: white;
+
+	
+	   outline: 0;
+	}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+form{
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.centeraa{
+	text-align: center;
+}
