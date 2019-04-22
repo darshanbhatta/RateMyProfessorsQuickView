@@ -1,6 +1,6 @@
 # Rate My Professors QuickView
 
-See Rate My Professor info without having to leave your page!
+See Rate My Professors info without having to leave your page!
 
 <img src="https://darshanbhatta.com/rmp/images/icon.png" alt="RMP QuickView Logo" height = "100px" width = "100px" align="right">
 
