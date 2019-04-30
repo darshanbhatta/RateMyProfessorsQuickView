@@ -63,10 +63,6 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
       if (xhr.readyState == 4) {
         // JSON.parse does not evaluate the attacker's scripts.
         var resp = JSON.parse(xhr.responseText);
-
-        chrome.tabs.executeScript({
-          code: 'document.body.style.backgroundColor="red"'
-        });
         chrome.tabs.sendRequest(tab.id, { method: "gotName", data: resp,uni:  data.college});
       }
     }

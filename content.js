@@ -36,7 +36,7 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
         
                 console.log();
                 for(var i in request.data.tags){
-                    builder+=`<div class="tagelements" style="margin-left:10px;"><span class="tagText">${request.data.tags[i]}</span></div> `;
+                    builder+=`<div class="tagelementss" style="margin-left:10px;"><span class="tagTextt">${request.data.tags[i]}</span></div> `;
                 }
                
             
@@ -59,26 +59,25 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
             var button = ``
             if(request.data.multi>1){
             
-                button = `<button class="errorr" onclick=" window.open('${request.data.searchURL}','_blank')">${request.data.multi} Entries</button>`
+                button = `<button class="errorrr" onclick=" window.open('${request.data.searchURL}','_blank')">${request.data.multi} Entries</button>`
             }
            
             
-            $(clickedEl).protipShow({title: `<div class="containerrrr"> <div title="Click the extension to change the college" class="unicont">
+            $(clickedEl).protipShow({title: `<div class="containerrrrr"> <div title="Click the extension to change the college" class="unicontt">
             <span style="font-size:14px;font-weight: 600;">Selected College:</span>
             <span style="font-size:14px;">${request.uni}</span>
-        </div><div class="header"> ${button}<span class="name">${request.data.name}</span><div class="desc"><span style="margin-bottom:5px">${request.data.title}</span> </div> <div class="descc"><span>${request.data.uni}</span></div> </div> <div class="ratings"><span class="centerText">Overall</span> <div class="circle"><span class="text_circle">${request.data.overallQuality}</span></div> </div> <div class="ratings"><span class="centerText">Take Again</span> <div class="circle"><span class="text_circle">${request.data.wouldTakeAgain}</span></div> </div> <div class="ratings"><span class="centerText">Difficulty</span> <div class="circle"><span class="text_circle">${request.data.difficulty}</span></div> </div> <div class="tags"> <span class="headersSmall">Tags</span> <div class="smallCardBox"> 
-            ${builder}</div> <div class="reviews"> <span class="headersSmall" >First Review</span> <div class="smallCardBox"> <div class="reviewTitle"> 
-            <span>${reviewTitle}</span> </div> <div class="dateTitle"> <span>${reviewDate}</span> </div> <div class="reviewText"> 
+        </div><div class="headerr"> ${button}<span class="namee">${request.data.name}</span><div class="descc"><span style="margin-bottom:5px">${request.data.title}</span> </div> <div class="desccc"><span>${request.data.uni}</span></div> </div> <div class="ratingss"><span class="centerTextt">Overall</span> <div class="circlee"><span class="text_circlee">${request.data.overallQuality}</span></div> </div> <div class="ratingss"><span class="centerTextt">Take Again</span> <div class="circlee"><span class="text_circlee">${request.data.wouldTakeAgain}</span></div> </div> <div class="ratingss"><span class="centerTextt">Difficulty</span> <div class="circlee"><span class="text_circlee">${request.data.difficulty}</span></div> </div> <div class="tagss"> <span class="headersSmalll">Tags</span> <div class="smallCardBoxx"> 
+            ${builder}</div> <div class="reviewss"> <span class="headersSmalll" >First Review</span> <div class="smallCardBoxx"> <div class="reviewTitlee"> 
+            <span>${reviewTitle}</span> </div> <div class="dateTitlee"> <span>${reviewDate}</span> </div> <div class="reviewTextt"> 
             <span>${reviewBody}</span> 
-            </div> </div> <div class="centeraa"><button class="errora" onclick=" window.open('${request.data.url}','_blank')">Detailed View</button><img src=${url} alt="Rate My Professor Tag"> </div> </div>`,     interactive: true
+            </div> </div> <div class="centeraaa"><button class="erroraa" onclick=" window.open('${request.data.url}','_blank')">Detailed View</button><img src=${url} alt="Rate My Professor Tag"> </div> </div>`,     interactive: true
         });
     
         
         }else{
 
-            $(clickedEl).protipShow({title:`<div class="containerrrr" style="text-align:center;">
-
-           <div title="Click the extension to change the college" class="unicont">
+            $(clickedEl).protipShow({title:`<div class="containerrtrr" style="text-align:center;">
+           <div title="Click the extension to change the college" class="unicontt">
                <span style="font-size:14px;font-weight: 600;">Selected College:</span>
                <span style="font-size:14px;">${request.uni}</span>
            </div>
@@ -88,8 +87,8 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
            </div>
             
            
-           <div class="centeraa">
-               <button class="errora" onclick=" window.open('${request.data.searchURL}','_blank')">Detailed View</button>
+           <div class="centeraaa">
+               <button class="erroraa" onclick=" window.open('${request.data.searchURL}','_blank')">Detailed View</button>
                <img src="${url}" alt="Rate My Professor Tag">
            
            </div>
@@ -108,8 +107,6 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
             // autoClose: false,
             interactive: true,
             content: $(`<div class="header">${request.name}<span class="name"></span> <button class="error">Multi. Entries</button> <div class="desc"> <span>Professor in the Computer Science department</span> <span>University of Texas at Austin</span> </div> </div> <div class="ratings"><span class="centerText">Overall</span> <div class="circle"><span class="text_circle">4.0</span></div> </div> <div class="ratings"><span class="centerText">Take Again</span> <div class="circle"><span class="text_circle">4.0</span></div> </div> <div class="ratings"><span class="centerText">Difficulty</span> <div class="circle"><span class="text_circle">4.0</span></div> </div> <span class="headersSmall">Tags</span> <div class="smallCardBox"> <div class="tagelements" style="margin-left:10px;"><span class="tagText">AMAZING LECTURES (4)</span></div> <div class="tagelements"><span class="tagText">4)dssdsd</span></div> </div> <span class="headersSmall" >First Review</span> <div class="smallCardBox"> <div class="reviewTitle"> <span>AWESOME - CS398L</span> <span>08/06/2017</span> </div> <span>Great instructor, reasonable workload, and very interesting topic. Lectures were easy to follow and well organized. I definitely recommend his courses!</span> </div> <button class="error">Detailed View</button>`),
-
-
         }).tooltipster('show');
         */
         console.log("shown" + clickedEl);

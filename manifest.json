@@ -2,7 +2,7 @@
   "name": "Rate My Professors QuickView",
   "author": "Darshan Bhatta",
   "description": "See Rate My Professor info without having to leave your page!",
-  "version": "1",
+  "version": "1.1",
   "permissions": ["contextMenus","https://4only.xyz/", "storage"],
   "background": {
     "scripts": ["background.js"]
