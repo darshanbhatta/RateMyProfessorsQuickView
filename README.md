@@ -1,4 +1,4 @@
-# Rate My Professors QuickView
+#[Discontinued] Rate My Professors QuickView
 
 See Rate My Professors info without having to leave your page!
 
